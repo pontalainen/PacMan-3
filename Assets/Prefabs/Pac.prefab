@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 9206212169032950924}
   - component: {fileID: 9206212169032950925}
   - component: {fileID: 9206212169032950926}
+  - component: {fileID: 6364835230353102467}
   m_Layer: 0
   m_Name: Pac
   m_TagString: Untagged
@@ -390,6 +391,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6364835230353102467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206212169032950918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a36499dc8d56e74695c79c6088bf68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9206212167821821697
 PrefabInstance:
   m_ObjectHideFlags: 0
