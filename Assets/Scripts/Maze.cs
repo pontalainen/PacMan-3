@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Maze : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D collision)
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    //Debug.Log("Kolliderar");
+    //    //Debug.Log(collision.gameObject.name);
+    //    if (collision.gameObject.name.StartsWith("Dot"))
+    //    {
+    //        Destroy(collision.gameObject);
+    //        Debug.Log("Maze äter prick");
+    //    }
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("Kolliderar");
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name.StartsWith("Dot"))
         {
             Destroy(collision.gameObject);
-            Debug.Log("Kolli");
+            //Debug.Log("Maze äter prick");
         }
     }
 }

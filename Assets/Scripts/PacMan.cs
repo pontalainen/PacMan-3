@@ -49,25 +49,25 @@ public class PacMan : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             lastDir = "Up";
-            Debug.Log(lastDir);
+            //Debug.Log(lastDir);
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
             lastDir = "Right";
-            Debug.Log(lastDir);
+            //Debug.Log(lastDir);
         }
 
         else if (Input.GetKey(KeyCode.S))
         {
             lastDir = "Down";
-            Debug.Log(lastDir);
+            //Debug.Log(lastDir);
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
             lastDir = "Left";
-            Debug.Log(lastDir);
+            //Debug.Log(lastDir);
         }
 
         //movement in wanted direction when possible
@@ -98,35 +98,35 @@ public class PacMan : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Crash 1");
+       // Debug.Log("Crash 1");
         if (collision.gameObject.name.StartsWith("maze"))
         {
-            Debug.Log("Crash 2");
+            //Debug.Log("Crash 2");
             if (lastDir == "Right")
             {
                 rb.position = rb.position + new Vector2(-0.2f, 0);
-                Debug.Log("Flyttat");
+                //Debug.Log("Flyttat");
                 animator.Play("Pac_Idle_Right");
             }
 
             else if (lastDir == "Left")
             {
                 rb.position = rb.position + new Vector2(0.2f, 0);
-                Debug.Log("Flyttat");
+                //Debug.Log("Flyttat");
                 animator.Play("Pac_Idle_Left");
             }
 
             else if (lastDir == "Up")
             {
                 rb.position = rb.position + new Vector2(0, -0.2f);
-                Debug.Log("Flyttat");
+                //Debug.Log("Flyttat");
                 animator.Play("Pac_Idle_Up");
             }
 
             else if (lastDir == "Down")
             {
                 rb.position = rb.position + new Vector2(0, 0.2f);
-                Debug.Log("Flyttat");
+                //Debug.Log("Flyttat");
                 animator.Play("Pac_Idle_Down");
             }
         }
@@ -141,16 +141,4 @@ public class PacMan : MonoBehaviour
             rb.position = new Vector2(52.8f, 3.6f);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Debug.Log("Kolliderar");
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name.StartsWith("Dot"))
-        {
-            Destroy(collision.gameObject);
-            Debug.Log("Kolli");
-        }
-    }
-
 }
